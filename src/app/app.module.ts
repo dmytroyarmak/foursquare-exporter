@@ -7,11 +7,16 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 
 import { LoginService } from './login.service';
+import { FoursquareApiService } from './foursquare-api.service';
+import { ListsComponent } from './lists/lists.component';
+import { ListComponent } from './list/list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    ListsComponent,
+    ListComponent
   ],
   imports: [
     BrowserModule,
@@ -19,7 +24,8 @@ import { LoginService } from './login.service';
     HttpModule
   ],
   providers: [
-    LoginService
+    LoginService,
+    FoursquareApiService
   ],
   bootstrap: [AppComponent]
 })
