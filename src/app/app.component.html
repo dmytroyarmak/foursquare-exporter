@@ -1,2 +1,3 @@
 <h1>Foursquare Exporter</h1>
-<app-login></app-login>
+<app-login *ngIf="!loginService.isLoggedIn()"></app-login>
+<div *ngIf="loginService.isLoggedIn()">Hello!</div>
