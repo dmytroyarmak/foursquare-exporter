@@ -1,2 +1,4 @@
 <h2>Your lists</h2>
-<app-list [list]="list" *ngFor="let list of lists"></app-list>
+<a *ngFor="let list of lists" [routerLink]="['/lists', list.id]">
+  <app-list [list]="list"></app-list>
+</a>

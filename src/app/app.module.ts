@@ -12,13 +12,17 @@ import { FoursquareApiService } from './foursquare-api.service';
 import { ListsComponent } from './lists/lists.component';
 import { ListComponent } from './list/list.component';
 import { AuthGuardService } from './auth-guard.service';
+import { VenuesComponent } from './venues/venues.component';
+import { VenueComponent } from './venue/venue.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     ListsComponent,
-    ListComponent
+    ListComponent,
+    VenuesComponent,
+    VenueComponent
   ],
   imports: [
     BrowserModule,
@@ -38,6 +42,11 @@ import { AuthGuardService } from './auth-guard.service';
         path: 'lists',
         canActivate: [AuthGuardService],
         component: ListsComponent
+      },
+      {
+        path: 'lists/:id',
+        canActivate: [AuthGuardService],
+        component: VenuesComponent
       }
     ])
   ],

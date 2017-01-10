@@ -7,7 +7,7 @@ import { FoursquareApiService } from '../foursquare-api.service';
   styleUrls: ['./lists.component.css']
 })
 export class ListsComponent implements OnInit {
-  lists;
+  lists:[any];
 
   constructor(public foursquareApiService:FoursquareApiService) { }
 
