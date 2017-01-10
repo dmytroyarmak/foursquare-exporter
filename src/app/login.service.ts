@@ -16,4 +16,11 @@ export class LoginService {
   isLoggedIn() {
     return !!this.token;
   }
+
+  redirectToLoginPage() {
+    window.location.href = 'https://foursquare.com/oauth2/authenticate' +
+      '?client_id=2BYCHRSAOW4YZPZIDUXVYCXNCL5AG2XTZSHATVXAGKG0WR0M' +
+      '&response_type=token' +
+      '&redirect_uri=' + document.getElementsByTagName('base')[0].href;
+  }
 }
